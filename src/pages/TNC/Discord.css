@@ -1,0 +1,56 @@
+.discord--container {
+	background-color: transparent;
+	background-image: url(/src/assets/discordbanner.jpg);
+	background-repeat: no-repeat;
+	display: flex;    
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;    	
+	background-size: 100% 100%;
+	height: auto;
+}
+
+.discord-link{
+	display: flexbox;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	text-align: left;
+	font-size: 20px;
+	width: 50%;
+	margin-bottom: 24px;
+	padding: 70px 24px 200px;
+	color: rgb(17, 17, 17);
+}
+.discord-link> h2{
+	font-family: 'NexaBold';
+	visibility: visible;
+	opacity: 1;
+	transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+	transition: opacity 0.8s cubic-bezier(0.5, 0, 0, 1) 0.2s, transform 0.8s cubic-bezier(0.5, 0, 0, 1) 0.2s;
+}
+
+.discord-link > p{
+	font-family: 'NexaLight';
+	margin-top: 30px;
+	margin-bottom: 30px;
+	visibility: visible;
+	opacity: 1;
+	transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+	transition: opacity 0.8s cubic-bezier(0.5, 0, 0, 1) 0.5s, transform 0.8s cubic-bezier(0.5, 0, 0, 1) 0.5s;
+}
+
+@media screen and (max-width: 992px) {
+	.discord--container {
+		background-size: cover;
+		background-position-x: right;
+	}	
+}
+@media screen and (max-width: 600px) {
+	.discord-link {
+		width: 90%;
+    margin: 0 auto;
+    padding-left: 0;
+    padding-right: 0;
+	}
+}
