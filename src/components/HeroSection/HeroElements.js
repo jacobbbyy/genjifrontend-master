@@ -112,7 +112,7 @@ export const HeroJap = styled.div`
 export const HeroDate = styled.div`
 	width: 200px;
 	margin-top: 300px;
-	margin-left: 1400px;
+	margin-left: 1600px;
 	position: absolute;
 	float: right;
 `

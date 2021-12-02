@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import { Link } from 'react-router-dom'
 import {
 	Nav,
@@ -22,6 +22,8 @@ import { animateScroll as scroll } from 'react-scroll';
 import NavbarLogo from '../../assets/navbarlogo.png'
 import Discord from '../../assets/discord_logo-01.png'
 import Twitter from '../../assets/twitter_logo-01.png'
+import Aos from 'aos';
+import "aos/dist/aos.css";
 
 
 
@@ -64,6 +66,8 @@ const NewNavbar = () => {
 	const toggleDrop = () => setIsAbout(!isAbout);
 	const toggling = () => setIsOpen(!isOpen);
 
+	useEffect(()=>{Aos.init({duration: 2000});}, []);
+
 
 	return (
 		<Nav scrollNav={scrollNav}>
@@ -85,7 +89,7 @@ const NewNavbar = () => {
 										
 										{isOpen && (
 											<DropdownContainer>
-												<DropdownList>
+												<DropdownList data-aos="fade-up">
 													<ListItem  >DAO</ListItem>
 													<ListItem  >Staking</ListItem>
 													<ListItem >Casino</ListItem>
@@ -118,7 +122,7 @@ const NewNavbar = () => {
 										
 										{isAbout && (
 											<DropdownContainer>
-												<DropdownList>
+												<DropdownList  data-aos="fade-up"> 
 													<ListItem  >Whitepaper</ListItem>
 													<ListItem  >Roadmap</ListItem>
 													<ListItem >Story</ListItem>

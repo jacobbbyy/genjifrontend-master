@@ -205,6 +205,7 @@ export const DropdownContainer = styled.div`
 export const DropdownList = styled.ul`
     background: #fff;
     margin: 0;
+	margin-top: 20px;
     padding: 0;
     height: 0;
     border-bottom-left-radius: 5px;
